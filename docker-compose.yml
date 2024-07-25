@@ -1,0 +1,12 @@
+services:
+  kafka:
+    container_name: kafka
+    image: apache/kafka:3.7.1
+    ports:
+      - "9092:9092"
+    stdin_open: true
+    tty: true
+
+networks:
+  default:
+    name: kafka-playground
