@@ -10,6 +10,7 @@ services:
       - BOOTSTRAP_SERVER=localhost:9092
       - BIN_FOLDER=/opt/kafka/bin
       - SERVICE_NAME=kp-kafka
+      - DEFAULT_TOPIC=quickstart-events
     stdin_open: true
     tty: true
 

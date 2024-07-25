@@ -17,6 +17,6 @@ stop:
 	@echo "Stopping the application"
 	@$(DOCKER_COMPOSE_COMMAND) -f docker-compose.yml down
 restart: stop start
+# -w is to set the working directory by default
 attach-shell:
-	# -w is to set the working directory by default
 	@$(DOCKER_COMPOSE_COMMAND) exec -w /usr/src/app/src/ $(service) bash
