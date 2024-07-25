@@ -4,7 +4,7 @@ ifndef DOCKER_COMPOSE_COMMAND
 override DOCKER_COMPOSE_COMMAND = docker-compose
 endif
 
-version?=0.0.1
+version?=0.1.0
 version:
 	@echo "Version: ${version}"
 
