@@ -1,9 +1,21 @@
 services:
-  kafka:
-    container_name: kafka
-    image: apache/kafka:3.7.1
+  kp-kafka:
+    container_name: kp-kafka
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        CONTAINER_KAFKA_FOLDER: /opt/kafka
     ports:
       - "9092:9092"
+    volumes:
+      - ./src:/usr/src/app/src:delegated
+    environment:
+      # Beware of Kafka configuration vars, they start with "KAFKA"
+      - BOOTSTRAP_SERVER=localhost:9092
+      - CONTAINER_KAFKA_FOLDER=/opt/kafka
+      - SERVICE_NAME=kp-kafka
+      - DEFAULT_TOPIC=quickstart-events
     stdin_open: true
     tty: true
 
