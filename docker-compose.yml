@@ -1,9 +1,15 @@
 services:
-  kafka:
-    container_name: kafka
+  kp-kafka:
+    container_name: kp-kafka
     image: apache/kafka:3.7.1
     ports:
       - "9092:9092"
+    volumes:
+      - ./src:/usr/src/app/src:delegated
+    environment:
+      - BOOTSTRAP_SERVER=localhost:9092
+      - BIN_FOLDER=/opt/kafka/bin
+      - SERVICE_NAME=kp-kafka
     stdin_open: true
     tty: true
 
