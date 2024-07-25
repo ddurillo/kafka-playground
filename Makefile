@@ -9,6 +9,9 @@ version:
 	@echo "Version: $(version)"
 
 service=kp-kafka
+build:
+	@echo "Building the application"
+	@$(DOCKER_COMPOSE_COMMAND) build --pull --no-cache $(service)
 start:
 	@echo "Starting the application"
 	@$(DOCKER_COMPOSE_COMMAND) -f docker-compose.yml up -d $(service)
