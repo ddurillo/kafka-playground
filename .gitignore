@@ -3,3 +3,6 @@
 .vs/*
 
 .env
+
+test.txt
+test.sink.txt
