@@ -1,0 +1,3 @@
+/usr/src/app/src/kafka-streams/write-app/streams-quickstart/src/main/java/myapps/Pipe.java
+/usr/src/app/src/kafka-streams/write-app/streams-quickstart/src/main/java/myapps/WordCount.java
+/usr/src/app/src/kafka-streams/write-app/streams-quickstart/src/main/java/myapps/LineSplit.java
